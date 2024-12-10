@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("time.jpeg");
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+    overflow: auto;
+    background-color: #1e1e2e;
+    color: #e0e0e0;
+}
+
+#container {
+    display: grid;
+    grid-template-areas:
+        "title title title"
+        "weather map riddles"
+        "airport map resources"
+        "airport map resources"
+        ". small-box .";
+    grid-template-rows: auto 1fr 1fr 1fr auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    width: 90vw;
+    height: 90vh;
+}
+
+#about-main {
+    grid-area: main;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #2a2e3b;
+    border: 1px solid #44475a;
+    border-radius: 10px;
+    text-align: center;
+    color: #f8f8f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#navbar {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #282a36;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#title {
+    font-size: 2.5rem;
+    color: #000000;
+}
+
+#about a {
+    font-size: 1rem;
+    color: #727472;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold; /
+}
+
+/* Weather Section */
+#weather {
+    grid-area: weather;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #c2c2c2;
+    color: #000000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Map Section */
+#map-container {
+    grid-area: map;
+    border: 2px solid #000000;
+    background-color: #727472;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Riddles Section */
+#riddles {
+    grid-area: riddles;
+    background-color: #c2c2c2;
+    color: #000000;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#riddles button {
+    font-weight: bold;
+}
+
+/* Current Airport Section */
+#current-airport {
+    grid-area: airport;
+    background-color: #ffb86c;
+    color: #282a36;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Resources Section */
+#resources {
+    grid-area: resources;
+    background-color: #c2c2c2;
+    color: #282a36;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Airport Found Section */
+#airport-found {
+    grid-area: airport;
+    background-color: #c2c2c2;
+    color: #282a36;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Enter Your Name and Button Section */
+label, input, button {
+    font-weight: bold;
+}
